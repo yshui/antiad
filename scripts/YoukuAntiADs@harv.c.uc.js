@@ -5,7 +5,7 @@
 // @include         chrome://browser/content/browser.xul
 // @author          harv.c
 // @homepage        http://haoutil.tk
-// @version         1.4.4.18
+// @version         1.4.5.19
 // @updateUrl       https://j.mozest.com/zh-CN/ucscript/script/92.meta.js
 // @downloadUrl     https://j.mozest.com/zh-CN/ucscript/script/92.uc.js
 // @updateURL     https://j.mozest.com/ucscript/script/92.meta.js
@@ -25,7 +25,11 @@
             },
             'ku6': {
                 'player': 'https://git.oschina.net/kawaiiushio/antiad/raw/master/ku6.swf',
-                're': /http:\/\/player\.ku6cdn\.com\/.*\/\d+\/player\.swf/i
+                're': /http:\/\/player\.ku6cdn\.com\/default\/common\/player\/\d{12}\/player\.swf/i
+            },
+            'ku6_out': {
+                'player': 'https://git.oschina.net/kawaiiushio/antiad/raw/master/ku6_out.swf',
+                're': /http:\/\/player\.ku6cdn\.com\/default\/out\/\d{12}\/player\.swf/i
             },
             'iqiyi': {
                 'player0': 'https://git.oschina.net/kawaiiushio/antiad/raw/master/iqiyi_out.swf',
@@ -47,14 +51,18 @@
             },
             'letv': {
                 'player': 'https://git.oschina.net/kawaiiushio/antiad/raw/master/letv.swf',
-                're': /http:\/\/.*letv[\w]*\.com\/.*\/(?!Live)[\w]{4}Player[^\.]*\.swf/i
+                're': /http:\/\/.*letv[\w]*\.com\/(.*\/(?!live)((v2)?[\w]{4}|swf)player[^\.]*|[\w]*cloud)\.swf/i
+            },
+            'kletv': {
+                'player': 'http://player.haoutil.com/player/kletv.swf',
+                're': /http:\/\/player\.letvcdn\.com\/p\/.*\/1\/kletvplayer\.swf/i
             },
             'pplive': {
-                'player': 'https://git.oschina.net/kawaiiushio/antiad/raw/master/pplive.swf',
+                'player': 'https://git.oschina.net/kawaiiushio/antiad/raw/master//pplive.swf',
                 're': /http:\/\/player\.pplive\.cn\/ikan\/.*\/player4player2\.swf/i
             },
             'pplive_live': {
-                'player': 'https://git.oschina.net/kawaiiushio/antiad/raw/master/pplive_live.swf',
+                'player': 'https://git.oschina.net/kawaiiushio/antiad/raw/master//pplive_live.swf',
                 're': /http:\/\/player\.pplive\.cn\/live\/.*\/player4live2\.swf/i
             }
         },
